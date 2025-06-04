@@ -14,7 +14,7 @@ import streamlit as st
 from openai import OpenAI
 
 # Show title and description.
-st.title("💬 Chatbott")
+st.title("Poem-bot")
 #openai_api_key = st.text_input("OpenAI API Key", type="password")
 
 
