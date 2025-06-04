@@ -2,12 +2,11 @@ import streamlit as st
 import getpass
 import os
 
+'''
 st.write("dkdkdkdy")
 st.write(st.secrets.get("open_api_key"))
-
-
 os.environ["OPENAI_API_KEY"]=st.secrets.get("open_api_key")
-
+'''
 
 
 
