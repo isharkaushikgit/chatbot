@@ -3,9 +3,6 @@ import getpass
 import os
 
 
-#st.write("dkdkdkdy")
-#st.write(st.secrets.get("open_api_key"))
-#os.environ["OPENAI_API_KEY"]=st.secrets.get("open_api_key")
 
 
 
@@ -13,9 +10,9 @@ import os
 import streamlit as st
 from openai import OpenAI
 
-# Show title and description.
+
 st.title("Poem-bot")
-#openai_api_key = st.text_input("OpenAI API Key", type="password")
+
 
 
 
