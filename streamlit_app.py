@@ -43,7 +43,7 @@ messages = [
         "system",
         "You are a poet. Write 4 lines poem using the supplied topic",
     ),
-    ("human", "dog"),
+    ("human",topic),
 ]
 
 if topic:
