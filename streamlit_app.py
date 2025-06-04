@@ -26,6 +26,48 @@ st.write(
 # via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
 openai_api_key = st.text_input("OpenAI API Key", type="password")
 openai_api_key = st.secrets.get("open_api_key")
+
+import getpass
+import os
+
+os.environ["OPENAI_API_KEY"]=openai_api_key
+from langchain_openai import ChatOpenAI
+
+llm = ChatOpenAI(
+    model="gpt-4o",
+    temperature=0,
+    max_tokens=None,
+    timeout=None,
+    max_retries=2,
+    # api_key="...",  # if you prefer to pass api key in directly instaed of using env vars
+    # base_url="...",
+    # organization="...",
+    # other params...
+)
+
+messages = [
+    (
+        "system",
+        "You are a poet. Write 4 lines poem using the supplied topic",
+    ),
+    ("human", "dog"),
+]
+ai_msg = llm.invoke(messages)
+#print(ai_msg.content)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 if not openai_api_key:
     st.info("Please add your OpenAI API key to continue.", icon="🗝️")
 else:
