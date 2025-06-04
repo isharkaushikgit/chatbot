@@ -19,13 +19,14 @@ st.title("Poem-bot")
 
 
 openai_api_key = st.secrets.get("open_api_key")
+os.environ["OPENAI_API_KEY"]=openai_api_key
 topic = st.text_input("topic pleasee")
 
 if topic:
     import getpass
     import os
     
-    os.environ["OPENAI_API_KEY"]=openai_api_key
+    #os.environ["OPENAI_API_KEY"]=openai_api_key
     from langchain_openai import ChatOpenAI
     
     llm = ChatOpenAI(
