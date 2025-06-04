@@ -5,7 +5,7 @@ import os
 st.write("dkdkdkdy")
 
 
-os.environ["OPENAI_API_KEY"]='os.environ["OPENAI_API_KEY"]='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''
+os.environ["OPENAI_API_KEY"]='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'
 from langchain_openai import ChatOpenAI
 
 llm = ChatOpenAI(
