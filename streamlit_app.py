@@ -1,3 +1,42 @@
+import getpass
+import os
+
+os.environ["OPENAI_API_KEY"]='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'
+from langchain_openai import ChatOpenAI
+
+llm = ChatOpenAI(
+    model="gpt-4o",
+    temperature=0,
+    max_tokens=None,
+    timeout=None,
+    max_retries=2,
+    # api_key="...",  # if you prefer to pass api key in directly instaed of using env vars
+    # base_url="...",
+    # organization="...",
+    # other params...
+)
+
+messages = [
+    (
+        "system",
+        "You are a poet. Write 4 lines poem using the supplied topic",
+    ),
+    ("human", "sky"),
+]
+ai_msg = llm.invoke(messages)
+
+
+#print(ai_msg.content)
+
+
+
+
+
+
+
+
+
+
 import streamlit as st
 from openai import OpenAI
 
