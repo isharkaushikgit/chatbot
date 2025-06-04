@@ -20,6 +20,17 @@ llm = ChatOpenAI(
     # other params...
 )
 
+messages = [
+    (
+        "system",
+        "You are a poet. Write 4 lines poem using the supplied topic",
+    ),
+    ("human", "sky"),
+]
+ai_msg = llm.invoke(messages)
+#ai_msg
+
+#print(ai_msg.content)
 
 
 
