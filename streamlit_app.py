@@ -53,7 +53,7 @@ messages = [
     ("human", "dog"),
 ]
 ai_msg = llm.invoke(messages)
-print(ai_msg.content)
+st.write(ai_msg.content)
 
 
 
