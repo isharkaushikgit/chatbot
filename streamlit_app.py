@@ -46,11 +46,11 @@ messages = [
     ("human",topic),
 ]
 
-ai_msg = llm.invoke(messages)
-st.write(ai_msg.content)
+
 
 if topic:
-    st.write('ddddd')
+    ai_msg = llm.invoke(messages)
+    st.write(ai_msg.content)
 
 
 
