@@ -17,6 +17,7 @@ st.title("Poem-bot")
 from PIL import Image
 import io
 import numpy as np
+import requests
 image_bytes = response.content
 image = Image.open(io.BytesIO(image_bytes))
 image.save('output_image0.jpg')
