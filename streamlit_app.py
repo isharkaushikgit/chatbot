@@ -48,8 +48,6 @@ messages = [
 
 if topic:
 
-    
-
     ai_msg = llm.invoke(messages)
     st.write(ai_msg.content)
 
