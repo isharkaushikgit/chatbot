@@ -47,12 +47,38 @@ messages = [
     ("human",topic),
 ]
 
+import openai
+openai.api_key = openai_api_key
+import requests
+from PIL import Image
+def generate(text):
+  res = openai.Image.create(
+    prompt=text,
+    n=1,
+    size="256x256",
+  )
+  return res["data"][0]["url"]
+
 
 
 if topic:
     ai_msg = llm.invoke(messages)
     st.write(ai_msg.content)
 
+
+
+
+
+
+    text = "mouse"
+    url1 = generate(text)
+    response = requests.get(url1)
+
+
+
+
+
+    
     from PIL import Image
     import io
     import numpy as np
