@@ -4,7 +4,17 @@ import os
 
 
 
+from PIL import Image
+import io
+from google.colab.patches import cv2_imshow
+import cv2
+import numpy as np
 
+image_bytes = response.content
+image = Image.open(io.BytesIO(image_bytes))
+image.save('output_image0.jpg')
+image1 = cv2.imread("output_image0.jpg")
+cv2_imshow(image1)
 
 
 import streamlit as st
