@@ -23,8 +23,7 @@ image_bytes = response.content
 image = Image.open(io.BytesIO(image_bytes))
 image.save('output_image0.jpg')
 image1 = cv2.imread("output_image0.jpg")
-st.write(image1)
-
+st.image(image1, caption='Enter any caption here')
 
 
 
