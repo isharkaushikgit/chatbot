@@ -41,7 +41,7 @@ llm = ChatOpenAI(
 messages = [
     (
         "system",
-        "You are a poet. Write 4 lines poem using the supplied topic",
+        "You are a poet. Write 4 lines poem using the supplied topic. Use the word twice.",
     ),
     ("human",topic),
 ]
