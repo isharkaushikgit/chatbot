@@ -16,7 +16,6 @@ st.title("Poem-bot")
 
 from PIL import Image
 import io
-import cv2
 import numpy as np
 image_bytes = response.content
 image = Image.open(io.BytesIO(image_bytes))
